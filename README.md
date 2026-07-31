@@ -15,7 +15,7 @@ A hardware setpoint (potentiometer) and a real sensor (LM35) feed a proportional
 
 ---
 
-## ⏱️ 30-Second Version
+## ⏱️ Summary
 
 - **What it is:** a PID-style temperature controller — sensor → control law → PWM actuator — implemented from scratch on STM32 HAL, with a custom C++ peripheral abstraction layer.
 - **What it does:** reads temperature (LM35) and a target setpoint (potentiometer) via interrupt-driven ADC, computes a proportional control output, drives a PWM heater, and reports everything over UART in real time.
