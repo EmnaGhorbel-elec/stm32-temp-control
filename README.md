@@ -11,7 +11,7 @@ A hardware setpoint (potentiometer) and a real sensor (LM35) feed a proportional
   <img alt="license" src="https://img.shields.io/badge/license-MIT-green">
 </p>
 
-> 📸 *Add a screenshot or short screen-recording GIF of the dashboard here — this is the single highest-impact thing you can add for anyone skimming the repo.* → `docs/screenshots/`
+> 📸 ![Dashboard screenshot](C:\Users\MSI\Pictures\Screenshots\dashboard.png)
 
 ---
 
