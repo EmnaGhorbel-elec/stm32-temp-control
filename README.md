@@ -11,7 +11,7 @@ A hardware setpoint (potentiometer) and a real sensor (LM35) feed a proportional
   <img alt="license" src="https://img.shields.io/badge/license-MIT-green">
 </p>
 
-> 📸 ![Dashboard screenshot]((docs/screenshots/dashboard.png))
+> 📸 ![Dashboard screenshot](docs/screenshots/dashboard.png)
 
 ---
 
