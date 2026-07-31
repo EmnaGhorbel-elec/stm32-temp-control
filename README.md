@@ -62,7 +62,7 @@ stm32-temp-control/
 │   ├── stm32_dashboard.py     # Live/simulated monitoring dashboard
 │   └── requirements.txt
 ├── docs/
-│   └── screenshots/            # Add dashboard screenshots/GIFs here
+│   └── screenshots/           
 ├── LICENSE
 └── README.md
 ```
