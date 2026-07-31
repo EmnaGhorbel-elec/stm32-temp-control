@@ -1,0 +1,27 @@
+# --- STM32CubeIDE / Eclipse ---
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.launch
+.metadata/
+.settings/
+*.cproject
+*.project
+
+# --- Python / dashboard ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
