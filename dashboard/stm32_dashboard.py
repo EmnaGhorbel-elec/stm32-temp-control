@@ -1,5 +1,5 @@
 """
-STM32F446RE — Temperature Regulation Dashboard  (Pro Light Edition)
+STM32F407 — Temperature Regulation Dashboard  (Pro Light Edition)
 Run:
     pip install -r requirements.txt
     python stm32_dashboard.py
@@ -329,7 +329,7 @@ app.layout = html.Div(className="dash-outer", children=[
         html.Div(className="sidebar-logo", children=[
             html.Div("🌡", className="sidebar-logo-icon"),
             html.Div(className="sidebar-logo-text", children=[
-                html.H2("STM32F446RE"),
+                html.H2("STM32F407"),
                 html.Span("Temp. Regulation System"),
             ]),
         ]),
@@ -412,7 +412,7 @@ app.layout = html.Div(className="dash-outer", children=[
         html.Div(className="top-bar", children=[
             html.Div([
         html.H1("Temperature Regulation Dashboard ✨"),
-                html.Div("STM32F446RE · HSE+PLL · Real-time P-Controller", className="subtitle"),
+                html.Div("STM32F407 · HSE+PLL · Real-time P-Controller", className="subtitle"),
             ]),
             html.Div(id="tick-label", className="tick-pill"),
         ]),

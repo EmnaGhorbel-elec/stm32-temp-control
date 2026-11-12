@@ -11,7 +11,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-uint16_t regPID(uint32_t tm, uint32_t tc);
+uint16_t regP(uint32_t tm, uint32_t tc);
 
 /* USER CODE BEGIN 0 */
 
@@ -68,7 +68,7 @@ int main(void)
     HAL_NVIC_SetPriority(TIM7_IRQn, 0, 0);
     HAL_NVIC_EnableIRQ(TIM7_IRQn);
 
-    // PWM TIM4 (PB6) — drives the heater
+    // PWM TIM4 (PB6) — drives the actuator
     pb6pwm.stm_init(GPIO_PIN_6, GPIO_MODE_AF_PP, GPIO_AF2_TIM4);
     tim4pwm.pwminit(PWM_MAX, 0, TIM_COUNTERMODE_UP, TIM_CHANNEL_1);
     tim4pwm.startchannel(TIM_CHANNEL_1);
@@ -98,7 +98,7 @@ int main(void)
             uint32_t Tc = Tcmin + ((pot * (Tcmax - Tcmin)) >> 12);
 
             // Proportional control -> PWM duty cycle
-            mli = regPID(Tm, Tc);
+            mli = regP(Tm, Tc);
             tim4pwm.setdutycycle(TIM_CHANNEL_1, mli);
 
             // Machine-readable telemetry line, parsed by the PC-side dashboard
@@ -167,8 +167,8 @@ void ADC_IRQHandler(void)
 }
 }
 
-/* ================= PID ================= */
-uint16_t regPID(uint32_t tm, uint32_t tc)
+/* ================= P CONTROLLER ================= */
+uint16_t regP(uint32_t tm, uint32_t tc)
 {
     uint16_t kp = 800;
     uint32_t output = 0;
